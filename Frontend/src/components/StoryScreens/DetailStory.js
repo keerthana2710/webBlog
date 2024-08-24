@@ -176,10 +176,7 @@ const DetailStory = () => {
               {activeUser && story.author &&
                 story.author._id === activeUser._id &&
                 <div className="top_story_transactions">
-                  {/* <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
-                    <FiEdit />
-                  </Link> */}
-                           {/*<Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
+                  {/*<Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
                     <FiEdit />
                     </Link>*/}
                    <span className='editStoryLink' onClick={navigateEdit(story.slug)}>
