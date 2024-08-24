@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab:wght@800&display=swap&family=Saira+Condensed:wght@500&family=Staatliches&display=swap");
+
+header {
+  width: 100%;
+  height: 95px;
+  position: relative;
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Subtle gradient background */
+}
+
+header .averager {
+  max-width: 100%; /* Ensures it uses the full width of the viewport */
+  width: 100%;
+  height: 92px;
+  border-bottom: rgba(0, 0, 0, 0.2) solid 2px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px; /* Added padding for better spacing */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+  background: #ffffff; /* Solid background for content area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+h5{
+  color:#003c6c;
+}
+header .logo {
+  text-decoration: none;
+  color: black;
+  font-family: "Staatliches", cursive;
+  color: #030303;
+}
+
+header .logo h5 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  margin-top: 3px;
+}
+
+.header_options {
+  display: flex;
+  align-items: center;
+}
+
+.header_options div.noAuth_options a,
+.header_options div.auth_options a.addStory-link {
+  text-decoration: none;
+  padding: 6px 1.6rem; /* Increased padding for better click area */
+  font-weight: bold;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 1.2rem;
+  color: rgb(77, 77, 77);
+  border-radius: 4px; /* Added border-radius for rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.addStory-link {
+  color: #ffffff !important;
+  background-color: #078191; /* Changed to a solid color for better visibility */
+  border: none;
+  padding: 6px 14px !important;
+  margin-right: 2rem;
+  border-radius: 4px;
+  margin-top: 7px;
+}
+
+.addStory-link:hover {
+  background-color: #03294d; /* Darker shade on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+.register-link {
+  border: #033947 solid 2px;
+  border-radius: 4px;
+  color: #000000 !important;
+  padding: 6px 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.register-link:hover {
+  background-color: #033947;
+  color: #ffffff;
+}
+
+.search-form {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1030px) {
+  header .averager {
+    padding: 0 1rem;
+  }
+
+  .search-form {
+    display: none;
+  }
+}
+
+.search-form input {
+  width: calc(100% - 40px); /* Adjusted for button spacing */
+  color: rgb(0, 0, 0);
+  padding: 0.8rem;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  padding-left: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly more opaque for contrast */
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+.search-form input:focus {
+  background-color: #ffffff; /* Full opacity on focus */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Add shadow on focus */
+}
+
+.search-form button {
+  position: absolute;
+  border: none;
+  top: 25px;
+  right: 10px; /* Adjusted for better alignment */
+  background: none;
+  transition: color 0.3s;
+}
+
+.search-form button.disBtn {
+  color: rgb(167, 164, 164);
+}
+
+.search-form button.searchBtn {
+  color: #0063a5 !important;
+}
+
+.search-form button i {
+  font-size: 1.4rem;
+}
+
+.header_options div.auth_options {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 70px;
+}
+
+.header-profile-wrapper {
+  height: 50px;
+  position: relative;
+}
+
+.header-profile-wrapper img {
+  border-radius: 50%;
+  width: 52px;
+  cursor: pointer;
+  height: 52px;
+  margin-top: 3px;
+  transition: box-shadow 0.3s; /* Smooth transition for shadow effect */
+}
+
+.header-profile-wrapper img:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.header-profile-wrapper:hover .sub-profile-wrap {
+  display: flex !important;
+}
+
+.sub-profile-wrap {
+  position: absolute;
+  top: 55px;
+  background-color: white;
+  width: 130px;
+  height: 130px;
+  padding: 1.5rem 0.2rem;
+  right: -42px;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 6px;
+  border: rgba(218, 217, 217, 0.6) solid 1px;
+  box-shadow: 0 0 2px 4px rgb(206 206 206 / 20%);
+  display: none;
+  z-index: 52;
+  transition: opacity 0.3s, transform 0.3s; /* Smooth transition for visibility and position */
+}
+
+.sub-profile-wrap a.profile-link {
+  margin-bottom: 1.2rem;
+  text-decoration: none;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 1.2rem;
+  color: #0063a5;
+  font-weight: 500;
+}
+
+.profile-link svg {
+  font-size: 1.1rem;
+  margin-right: 4px;
+  margin-top: -5px;
+}
+
+.sub-profile-wrap button.logout-btn {
+  border: none;
+  background-color: white;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ff0000;
+}
+
+.sub-profile-wrap button.logout-btn svg {
+  margin-right: 4px;
+  margin-top: -5px;
+}
+
+.readList-link {
+  color: black;
+  font-size: 2rem;
+  margin-right: 1.8rem;
+  color: #024d80;
+  position: relative;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.readList-link:hover {
+  color: #003c6c;
+}
+
+#readListLength {
+  position: absolute;
+  background-color: #0063a5;
+  box-shadow: 0 0 4px 1px #0063a5;
+  text-decoration: none;
+  top: 3px;
+  right: -12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: "Inter";
+  line-height: 24px;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+}
