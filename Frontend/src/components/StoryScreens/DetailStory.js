@@ -113,6 +113,9 @@ const DetailStory = () => {
     return `${d.toLocaleString('en', { month: 'short' })} ${d.getDate()}`;
   };
 
+  const navigateEdit = (editPage)=>{
+    navigate(`/story/${editPage}/edit`)
+  }
   const addStoryToReadList = async () => {
     try {
       const { data } = await api.post(`/user/${slug}/addStoryToReadList`, { activeUser }, {
@@ -179,7 +182,9 @@ const DetailStory = () => {
                   <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
                     <FiEdit />
                     </Link>
-
+                   const navigateEdit = (editPage)=>{
+                     navigate(`/story/${editPage}/edit`)
+                   }
                   <span className='deleteStoryLink' onClick={handleDelete}>
                     <RiDeleteBin6Line />
                   </span>
