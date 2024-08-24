@@ -71,7 +71,7 @@ const DetailStory = () => {
 
     return () => { isMounted = false; }; // Cleanup function
 
-  }, [slug]);
+  }, [slug,navigate]);
 
   const handleLike = async () => {
     setLikeStatus(prevStatus => !prevStatus);
@@ -113,9 +113,9 @@ const DetailStory = () => {
     return `${d.toLocaleString('en', { month: 'short' })} ${d.getDate()}`;
   };
 
-  const navigateEdit = (editPage)=>{
-    navigate(`/story/${editPage}/edit`)
-  }
+  // const navigateEdit = (editPage)=>{
+  //   navigate(`/story/${editPage}/edit`)
+  // }
   const addStoryToReadList = async () => {
     try {
       const { data } = await api.post(`/user/${slug}/addStoryToReadList`, { activeUser }, {
@@ -176,12 +176,12 @@ const DetailStory = () => {
               {activeUser && story.author &&
                 story.author._id === activeUser._id &&
                 <div className="top_story_transactions">
-                  {/*<Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
+                  <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
                     <FiEdit />
-                    </Link>*/}
-                   <span className='editStoryLink' onClick={navigateEdit(story.slug)}>
+                    </Link>
+               {/* <span className='editStoryLink' onClick={navigateEdit(story.slug)}>
                     <FiEdit />
-                   </span>
+                   </span>*/}
                   <span className='deleteStoryLink' onClick={handleDelete}>
                     <RiDeleteBin6Line />
                   </span>
