@@ -182,9 +182,9 @@ const DetailStory = () => {
                   <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
                     <FiEdit />
                     </Link>
-                   const navigateEdit = (editPage)=>{
-                     navigate(`/story/${editPage}/edit`)
-                   }
+                   <span className='editStoryLink' onClick={navigateEdit(story.slug)}>
+                    <FiEdit />
+                  </span>
                   <span className='deleteStoryLink' onClick={handleDelete}>
                     <RiDeleteBin6Line />
                   </span>
