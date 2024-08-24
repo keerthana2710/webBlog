@@ -71,7 +71,7 @@ const DetailStory = () => {
 
     return () => { isMounted = false; }; // Cleanup function
 
-  }, [slug, navigate]);
+  }, [slug]);
 
   const handleLike = async () => {
     setLikeStatus(prevStatus => !prevStatus);
