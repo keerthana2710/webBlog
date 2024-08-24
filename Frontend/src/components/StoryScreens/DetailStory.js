@@ -179,12 +179,12 @@ const DetailStory = () => {
                   {/* <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
                     <FiEdit />
                   </Link> */}
-                  <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
+                           {/*<Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
                     <FiEdit />
-                    </Link>
+                    </Link>*/}
                    <span className='editStoryLink' onClick={navigateEdit(story.slug)}>
                     <FiEdit />
-                  </span>
+                   </span>
                   <span className='deleteStoryLink' onClick={handleDelete}>
                     <RiDeleteBin6Line />
                   </span>
